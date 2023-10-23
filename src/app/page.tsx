@@ -1,13 +1,12 @@
 import TopBar from ".//components/topBar"
+import MainArea from "./components/mainArea"
+
 
 export default function Home() {
     return (
         <main>
             <TopBar/>
-
-            <div>
-                Here is some data
-            </div>
+            <MainArea/>
 
         </main>
     )
