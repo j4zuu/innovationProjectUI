@@ -2,7 +2,7 @@ h1 {
     color: blue;
 }
 
-h2{
+h2 {
     font-size: x-large;
 }
 
@@ -11,9 +11,9 @@ h2{
     flex-direction: column;
     align-items: center;
     margin: 2rem;
-  }
-  
-  .login-form {
+}
+
+.login-form {
     max-width: 300px;
     width: 100%;
     padding: 1rem;
@@ -22,36 +22,45 @@ h2{
     background-color: #f7f7f7;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 7%;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin: 10px 0;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     font-weight: bold;
-    color: #26577C; 
-  }
-  
-  input {
+    color: #26577C;
+}
+
+input {
     width: 100%;
     padding: 8px;
     border: 1px solid #B4B4B3;
     border-radius: 5px;
-  }
-  
-  button {
+}
+
+button {
     width: 100%;
     padding: 10px;
-    background-color: #0056b3; 
-    color: #fff; 
+    background-color: #0056b3;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  button:hover {
-    background-color: #0056b3; 
-  }
-  
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.mainArea {
+    display: flex;
+    height: 100vh;
+    background-color: rgb(235, 228, 209);
+    margin-top: 72px;
+    align-items: center;
+    flex-direction: column;
+}
