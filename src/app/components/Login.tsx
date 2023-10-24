@@ -2,15 +2,18 @@
 
 import React, { useState } from 'react';
 import "../styles.css";
+import {useRouter} from "next/navigation";
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter()
 
   const handleLogin = () => {
-    
     console.log('Email:', email);
     console.log('Password:', password);
+    router.push('/main')
+
   };
 
   return (
@@ -35,7 +38,7 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="button">
+        <button onClick={handleLogin} type="button">
           Login
         </button>
       </form>
