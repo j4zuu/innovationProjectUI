@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/mainArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MainArea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/topBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +85,7 @@
       <workItem from="1696863151576" duration="1093000" />
       <workItem from="1698162421081" duration="400000" />
       <workItem from="1698162846010" duration="2494000" />
-      <workItem from="1698165425148" duration="6531000" />
+      <workItem from="1698165425148" duration="7599000" />
     </task>
     <servers />
   </component>
