@@ -1,4 +1,4 @@
-/*import config from "../../../tailwind.config";
+import config from "../../../tailwind.config";
 import "../styles.css";
 import LoginForm from "./Login";
 
@@ -8,4 +8,4 @@ export default function MainArea() {
                 <LoginForm/>
         </div>
     )
-}*/
+}

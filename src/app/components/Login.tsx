@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client" 
 
 import React, { useState } from 'react';
@@ -41,6 +42,9 @@ const LoginForm = () => {
         <button onClick={handleLogin} type="button">
           Login
         </button>
+        <p>
+        Don't have an account? <a href="/registration">Sign up</a>
+      </p>
       </form>
     </div>
   );

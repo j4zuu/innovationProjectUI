@@ -19,7 +19,7 @@ h2 {
     padding: 1rem;
     border: 1px solid #B4B4B3;
     border-radius: 5px;
-    background-color: #f7f7f7;
+    background-color: #e9e9e9e6;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 7%;
 }
@@ -44,15 +44,17 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #0056b3;
+    background-color: #26577C !important;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #26577C;
 }
 
 
