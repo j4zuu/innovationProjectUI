@@ -1,19 +1,27 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client" 
 
-import React, { useState } from 'react';
+import React, { useState, SyntheticEvent } from 'react';
 import "../styles.css";
 import {useRouter} from "next/navigation";
+import { getBearerToken } from '../auth/auth';
 
-const LoginForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const LoginForm: React.FC = () => {
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const router = useRouter()
 
-  const handleLogin = () => {
-    console.log('Email:', email);
-    console.log('Password:', password);
-    router.push('/main')
+  const handleLogin = async (e: SyntheticEvent) => {
+    e.preventDefault();
+    const token = await getBearerToken(username, password);
+    console.log(token)
+    
+    
+  if (token) {
+    router.push('/main');
+  } else {
+    console.log('Login failed or no token received');
+  }
 
   };
 
@@ -22,12 +30,12 @@ const LoginForm = () => {
       <h2>Login</h2>
       <form className="login-form">
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="username">Username</label>
           <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="username"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </div>
         <div className="form-group">
