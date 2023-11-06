@@ -21,6 +21,7 @@ export async function getBearerToken(username: string, password: string) {
       console.log('API Response:', data);  
       const token = data.access_token;
       console.log('Bearer Token!:', token);
+      localStorage.setItem('token', token);
       return token;
       // Voit nyt käyttää tätä tokenia muihin pyyntöihin.
     } else {
@@ -30,4 +31,8 @@ export async function getBearerToken(username: string, password: string) {
     console.error('Login error:', error);
   }
 
+}
+
+export function getTokenFromStorage(): string | null {
+  return localStorage.getItem('token');
 }

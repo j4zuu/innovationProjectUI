@@ -1,11 +1,12 @@
 // apiUtils.ts
 import { getBearerToken } from "./auth";
+import { getTokenFromStorage } from "./auth";
 
 const apiUrl = 'https://sensec.dy.fi/rooms/1';
 
-export const fetchDataWithToken = async (username: string, password: string) => {
+export const fetchDataWithToken = async () => {
   try {
-    const token = await getBearerToken(username, password);
+    const token = await getTokenFromStorage();
 
     const requestOptions: RequestInit = {
       method: 'GET',

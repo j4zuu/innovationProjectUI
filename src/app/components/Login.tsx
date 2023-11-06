@@ -6,13 +6,12 @@ import "../styles.css";
 import { useRouter } from "next/navigation"; // Use "next/router" instead of "next/navigation"
 import { getBearerToken } from '../auth/auth';
 import { fetchDataWithToken } from '../auth/apiUtils';
+import { getTokenFromStorage } from '../auth/auth';
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const router = useRouter();
-
-  fetchDataWithToken(username, password)
    
 
   const handleLogin = async (e: SyntheticEvent) => {
