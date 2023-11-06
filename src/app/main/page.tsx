@@ -12,16 +12,17 @@ const temp4: number = 4
 
 const Page = () => {
     return (
-        <div className="mainArea">
+        <div className="main">
             <TopBar/>
-            <Feed/>
-            <div className="base">
-                <TempCard temp={temp1}/>
-                <TempCard temp={temp2}/>
-                <TempCard temp={temp3}/>
-                <TempCard temp={temp4}/>
+            <div>
+                <Feed/>
+                <div className="base">
+                    <TempCard temp={temp1}/>
+                    <TempCard temp={temp2}/>
+                    <TempCard temp={temp3}/>
+                    <TempCard temp={temp4}/>
+                </div>
             </div>
-
         </div>
     )
 }

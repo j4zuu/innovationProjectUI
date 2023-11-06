@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "v": "node -v"
   },
   "dependencies": {
-    "next": "13.5.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "@types/react-burger-menu": "^2.8.5",
+    "next": "^14.0.1",
+    "node": "18.17.0",
+    "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
