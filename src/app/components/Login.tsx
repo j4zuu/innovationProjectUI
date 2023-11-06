@@ -1,28 +1,35 @@
-/* eslint-disable react/no-unescaped-entities */
+
 "use client" 
 
 import React, { useState, SyntheticEvent } from 'react';
 import "../styles.css";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation"; // Use "next/router" instead of "next/navigation"
 import { getBearerToken } from '../auth/auth';
+import { fetchDataWithToken } from '../auth/apiUtils';
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const router = useRouter()
+  const router = useRouter();
+
+  fetchDataWithToken(username, password)
+   
 
   const handleLogin = async (e: SyntheticEvent) => {
     e.preventDefault();
-    const token = await getBearerToken(username, password);
-    console.log(token)
-    
-    
-  if (token) {
-    router.push('/main');
-  } else {
-    console.log('Login failed or no token received');
-  }
+    try {
+      const token = await getBearerToken(username, password);
+      console.log(token);
 
+      if (token) {
+        router.push("/main");
+      } else {
+        console.log("Login failed or no token received");
+      }
+
+    } catch (error) {
+      console.error("Login error:", error);
+    }
   };
 
   return (
@@ -50,9 +57,7 @@ const LoginForm: React.FC = () => {
         <button onClick={handleLogin} type="button">
           Login
         </button>
-        <p>
-        Don't have an account? <a href="/registration">Sign up</a>
-      </p>
+        <p> Don&apos;t have an account? <a href="/registration">Sign up</a></p>
       </form>
     </div>
   );

@@ -1,8 +1,9 @@
-"use client"
-import { getBearerToken } from "../auth/auth";
-import React, { useEffect, useState } from "react";
 
-//turha sivu atm!
+
+"use client"
+import React, { useEffect, useState } from "react";
+import { fetchDataWithToken } from "../auth/apiUtils";
+import { getBearerToken } from "../auth/auth";
 
 const Page = () => {
 
@@ -13,4 +14,4 @@ const Page = () => {
   );
 };
 
-export default Page;   
+export default Page;
