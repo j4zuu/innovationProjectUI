@@ -1,10 +1,9 @@
 "use client"
-
 import React from "react";
 import TopBar from "@/app/components/TopBar";
 import Feed from "@/app/components/Feed";
 import TempCard from "@/app/components/TempCard";
-import { fetchDataWithToken } from "../auth/apiUtils";
+import {fetchDataWithToken} from "../auth/apiUtils";
 
 const temp1: number = 1
 const temp2: number = 2
@@ -15,7 +14,6 @@ fetchDataWithToken()
 
 const Page = () => {
     return (
-        <div className="mainArea">
         <div className="main">
             <TopBar/>
             <div>

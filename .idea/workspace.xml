@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="">
+    <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="burger wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/MainArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MainArea.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/TopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles.css" afterDir="false" />
@@ -96,8 +98,18 @@
       <workItem from="1698228797160" duration="6414000" />
       <workItem from="1699268601567" duration="1355000" />
       <workItem from="1699269995897" duration="2389000" />
-      <workItem from="1699273213694" duration="2233000" />
+      <workItem from="1699273213694" duration="3340000" />
+      <workItem from="1699358302923" duration="1588000" />
+      <workItem from="1699360447524" duration="2267000" />
     </task>
+    <task id="LOCAL-00001" summary="burger wip">
+      <created>1699276089581</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699276089581</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,5 +125,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="burger wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="burger wip" />
   </component>
 </project>

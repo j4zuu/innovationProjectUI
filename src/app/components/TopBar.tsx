@@ -1,13 +1,12 @@
-import Hamburger from "@/app/components/Hamburger";
+import Hamburger from "./Hamburger";
+import React from "react";
 
-const TopBar = () => {
+const TopBar = ({ burger = true }: { burger?: boolean }) => {
     return (
         <div className="topBarStyle">
-            <Hamburger>
-            </Hamburger>
+            {burger ? <Hamburger burger={true} /> : null}
         </div>
-
     );
 }
 
-export default TopBar
+export default TopBar;

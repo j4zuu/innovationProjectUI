@@ -9,13 +9,13 @@ h2 {
 .main {
     background-color: rgb(235, 228, 209);
     height: 100vh;
+    flex: auto;
 }
 
 .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
 }
 
 .login-form {
