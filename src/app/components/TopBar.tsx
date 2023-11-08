@@ -4,7 +4,7 @@ import React from "react";
 const TopBar = ({ burger = true }: { burger?: boolean }) => {
     return (
         <div className="topBarStyle">
-            {burger ? <Hamburger burger={true} /> : null}
+            {burger ? <Hamburger burger={true}/> : null}
         </div>
     );
 }

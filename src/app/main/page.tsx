@@ -31,12 +31,10 @@ const Page = () => {
 
     return (
         <div className="main">
-            <TopBar />
-            <div>
-                <Feed />
-                <div className="base">
-                    {roomDivs}
-                </div>
+            <TopBar/>
+            <Feed/>
+            <div className="base">
+                {roomDivs}
             </div>
         </div>
     );

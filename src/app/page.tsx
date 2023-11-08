@@ -14,9 +14,9 @@ const Home = () => {
         redirect("/login")
     //}
     return (
-        <main>
+        <div>
             You should not be here
-        </main>
+        </div>
     )
 }
 

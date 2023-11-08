@@ -63,7 +63,7 @@ const RegistrationForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button onClick={handleRegistration} type="button">
+        <button onClick={handleRegistration} type="button" className="customButton">
           Sign Up
         </button>
         <p>

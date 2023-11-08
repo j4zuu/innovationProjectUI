@@ -50,7 +50,7 @@ const LoginForm: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button onClick={handleLogin} type="button">
+        <button onClick={handleLogin} type="button" className="customButton">
           Login
         </button>
         <p> Don&apos;t have an account? <a href="/registration">Sign up</a></p>
