@@ -1,5 +1,6 @@
-const loginApiUrl = 'https://sensec.dy.fi/auth/login';
-const apiUrl = 'https://sensec.dy.fi/rooms/1';
+import variables from "@/app/variables";
+
+const loginApiUrl = variables.mainURL + '/auth/login';
 
 export async function getBearerToken(username: string, password: string) {
   const loginData = {
@@ -10,7 +11,7 @@ export async function getBearerToken(username: string, password: string) {
   try {
     const response = await fetch(loginApiUrl, {
       method: 'POST',
-      headers: {   
+      headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(loginData),

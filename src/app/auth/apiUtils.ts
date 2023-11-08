@@ -1,8 +1,9 @@
 // apiUtils.ts
 import { getBearerToken } from "./auth";
 import { getTokenFromStorage } from "./auth";
+import variables from "@/app/variables";
 
-const apiUrl = 'https://sensec.dy.fi/rooms/1';
+const apiUrl = variables.mainURL + '/rooms';
 
 export const fetchDataWithToken = async () => {
   try {

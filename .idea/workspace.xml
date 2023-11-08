@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="burger wip">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/MainArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MainArea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/TopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TopBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="burger wip" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,6 +91,7 @@
       <workItem from="1699273213694" duration="3340000" />
       <workItem from="1699358302923" duration="1588000" />
       <workItem from="1699360447524" duration="2267000" />
+      <workItem from="1699382673001" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="burger wip">
       <created>1699276089581</created>

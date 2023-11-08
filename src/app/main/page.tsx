@@ -1,31 +1,45 @@
 "use client"
-import React from "react";
+import React, {useEffect, useState} from "react";
 import TopBar from "@/app/components/TopBar";
 import Feed from "@/app/components/Feed";
 import TempCard from "@/app/components/TempCard";
 import {fetchDataWithToken} from "../auth/apiUtils";
 
-const temp1: number = 1
-const temp2: number = 2
-const temp3: number = 3
-const temp4: number = 4
-
-fetchDataWithToken()
 
 const Page = () => {
+    const [roomData, setRoomData] = useState<any[]>([]); // Use an array type for roomData
+    useEffect(() => {
+        fetchDataWithToken()
+            .then((response) => {
+                if (Array.isArray(response)) {
+                    setRoomData(response);
+                } else {
+                    console.error("Data from fetchDataWithToken is not an array.");
+                    setRoomData([]);
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+            });
+    }, []);
+
+    const roomDivs = roomData.map((room, id) => (
+        <div key={id}>
+            <TempCard name={room.name}/>
+        </div>
+    ));
+
     return (
         <div className="main">
-            <TopBar/>
+            <TopBar />
             <div>
-                <Feed/>
+                <Feed />
                 <div className="base">
-                    <TempCard temp={temp1}/>
-                    <TempCard temp={temp2}/>
-                    <TempCard temp={temp3}/>
-                    <TempCard temp={temp4}/>
+                    {roomDivs}
                 </div>
             </div>
         </div>
-    )
-}
-export default Page
+    );
+};
+
+export default Page;
