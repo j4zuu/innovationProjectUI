@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="burger wip">
-      <change afterPath="$PROJECT_DIR$/src/app/images/bars-solid.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Hamburger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Hamburger.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Registration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/TopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TopBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="burger wip" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +96,7 @@
       <workItem from="1699360447524" duration="2267000" />
       <workItem from="1699382673001" duration="313000" />
       <workItem from="1699456590351" duration="18543000" />
-      <workItem from="1699481118208" duration="2511000" />
+      <workItem from="1699481118208" duration="3061000" />
     </task>
     <task id="LOCAL-00001" summary="burger wip">
       <created>1699276089581</created>
