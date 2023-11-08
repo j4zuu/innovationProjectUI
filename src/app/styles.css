@@ -34,6 +34,10 @@ h2 {
     margin: 10px 0;
 }
 
+.formButton{
+    background-color: #26577C;
+}
+
 label {
     display: block;
     font-weight: bold;
@@ -50,7 +54,6 @@ input {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #26577C !important;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -71,6 +74,14 @@ button:hover {
     margin-top: 72px;
     align-items: center;
     flex-direction: column;
+}
+
+.mainAreaTemp {
+    background-color: rgb(235, 228, 209);
+    height: 100vh;
+    flex: auto;
+    padding-top: 80px;
+
 }
 
 .tempBoxStyle{
@@ -104,8 +115,10 @@ button:hover {
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: absolute;
-    width: 36px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
+    margin-top: 4px;
 }
 
 /* Color/shape of burger icon bars */
@@ -165,3 +178,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
 }
+
+.temperature-container {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .temperature {
+    font-size: 36px;
+    color: #0077cc;
+    font-weight: bold;
+    margin-top: 10px;
+  }
