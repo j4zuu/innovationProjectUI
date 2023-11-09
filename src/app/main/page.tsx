@@ -3,10 +3,12 @@ import React, {useEffect, useState} from "react";
 import TopBar from "@/app/components/TopBar";
 import Feed from "@/app/components/Feed";
 import TempCard from "@/app/components/TempCard";
-import {fetchDataWithToken} from "../auth/apiUtils";
+import {fetchDataWithToken, postRoom} from "../auth/apiUtils";
 
 
 const Page = () => {
+    console.log(postRoom('room5'))
+
     const [roomData, setRoomData] = useState<any[]>([]); // Use an array type for roomData
     useEffect(() => {
         fetchDataWithToken()
