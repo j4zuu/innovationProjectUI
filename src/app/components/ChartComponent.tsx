@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { fetchDataWithToken, fetchTemperatureData } from '../auth/apiUtils';
-import { getTokenFromStorage } from '../auth/auth';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { fetchTemperatureData } from '../auth/apiUtils';
 import moment from 'moment';
 
 interface DataPoint {
@@ -28,33 +27,41 @@ const ChartComponent: React.FC = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures the effect runs once after initial render
+  }, []);
 
-  // Slice the last 10 values for the chart
-  const lastTenValues = data.slice(-10);
+  const aggregatedData: { [timestamp: string]: { totalValue: number; count: number } } = {};
+  data.forEach((point) => {
+    const hourTimestamp = moment(point.timestamp).startOf('hour').format('YYYY-MM-DD HH:mm:ss');
+    if (!aggregatedData[hourTimestamp]) {
+      aggregatedData[hourTimestamp] = { totalValue: 0, count: 0 };
+    }
+    aggregatedData[hourTimestamp].totalValue += point.value;
+    aggregatedData[hourTimestamp].count += 1;
+  });
 
-  // Extract timestamps and values for Recharts
-  const chartData = lastTenValues.map((point) => ({
-    timestamp: moment(point.timestamp).format('YYYY-MM-DD HH:mm:ss'),
-    value: point.value,
+  const chartData = Object.entries(aggregatedData).map(([timestamp, { totalValue, count }]) => ({
+    timestamp,
+    value: count > 0 ? totalValue / count : 0,
   }));
 
   return (
-    <div>
-      <h2>Humidity Chart (Last 10 Values)</h2>
+    <div style={{ margin: 'auto', textAlign: 'center' }}>
+      <h2>Temperature Chart</h2>
       {loading ? (
         <p>Loading chart...</p>
       ) : error ? (
         <p>{error}</p>
       ) : (
-        <LineChart width={600} height={300} data={chartData}>
-          <XAxis dataKey="timestamp" />
-          <YAxis />
-          <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="value" stroke="#8884d8" />
-        </LineChart>
+        <ResponsiveContainer width="90%" height={300}>
+          <LineChart data={chartData}>
+            <XAxis dataKey="timestamp" tickFormatter={(timestamp) => moment(timestamp).format('YYYY-MM-DD HH:mm')} />
+            <YAxis />
+            <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+            <Tooltip labelFormatter={(value) => moment(value).format('YYYY-MM-DD HH:mm')} />
+            <Legend />
+            <Line type="monotone" dataKey="value" stroke="#8884d8" />
+          </LineChart>
+        </ResponsiveContainer>    
       )}
     </div>
   );
