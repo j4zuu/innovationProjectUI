@@ -9,4 +9,4 @@ const TopBar = ({ burger = true }: { burger?: boolean }) => {
     );
 }
 
-export default TopBar;
+export default TopBar;     

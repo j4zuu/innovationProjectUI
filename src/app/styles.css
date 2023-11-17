@@ -76,12 +76,6 @@ button:hover {
     flex-direction: column;
 }
 
-.mainAreaTemp {
-    background-color: rgb(235, 228, 209);
-    height: 100vh;
-    flex: auto;
-}
-
 .tempBoxStyle {
     color: black;
     background-color: #616161;
@@ -160,12 +154,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /* Wrapper for item list */
-.bm-item-list {
+.bm-item-list {    
     color: #b8b7ad;
     padding: 0.8em;
 }
 
-/* Individual item */
+/* Individual item */  
 .bm-item {
     display: inline-block;
 }
@@ -173,21 +167,4 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
-}
-
-.temperature-container {
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.temperature {
-    font-size: 36px;
-    color: #0077cc;
-    font-weight: bold;
-    margin-top: 10px;
-}
+} 

@@ -4,16 +4,16 @@ import { getTokenFromStorage } from "./auth";
 import variables from "@/app/variables";
 
 const apiUrl = variables.mainURL + '/rooms';
-const tempDataUrl = variables.mainURL + 'devices/1/data?start_date=-20d';
+const tempDataUrl = variables.mainURL + 'devices/1/data?start_date=-1d';
 const postRoomUrl = variables.mainURL + 'rooms'
 
-export const fetchDataWithToken = async () => {
+export const fetchDataWithToken = async () => {   
   try {
     const token = await getTokenFromStorage();
 
     const requestOptions: RequestInit = {
       method: 'GET',
-      headers: {
+      headers: {   
         'Authorization': `Bearer ${token}`,
       },
     };  
