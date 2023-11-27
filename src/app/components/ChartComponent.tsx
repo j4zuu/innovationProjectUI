@@ -29,20 +29,19 @@ const ChartComponent: React.FC = () => {
     fetchData();
   }, []);
 
-  const aggregatedData: { [timestamp: string]: { totalValue: number; count: number } } = {};
-  data.forEach((point) => {
-    const hourTimestamp = moment(point.timestamp).startOf('hour').format('YYYY-MM-DD HH:mm:ss');
-    if (!aggregatedData[hourTimestamp]) {
-      aggregatedData[hourTimestamp] = { totalValue: 0, count: 0 };
-    }
-    aggregatedData[hourTimestamp].totalValue += point.value;
-    aggregatedData[hourTimestamp].count += 1;
-  });
+  const filteredData = data
+    .filter((point, index, array) => {
+      const currentTimestamp = moment(point.timestamp);
+      const nextTimestamp = index < array.length - 1 ? moment(array[index + 1].timestamp) : null;
+      return !nextTimestamp || currentTimestamp.hours() !== nextTimestamp.hours();
+    })
+    .slice(-30);
 
-  const chartData = Object.entries(aggregatedData).map(([timestamp, { totalValue, count }]) => ({
-    timestamp,
-    value: count > 0 ? totalValue / count : 0,
+  const chartData = filteredData.map((point) => ({
+    timestamp: moment(point.timestamp).format('DD.MM.YYYY HH:00'),
+    value: point.value,
   }));
+  console.log(chartData);
 
   return (
     <div style={{ margin: 'auto', textAlign: 'center' }}>
@@ -54,14 +53,14 @@ const ChartComponent: React.FC = () => {
       ) : (
         <ResponsiveContainer width="90%" height={300}>
           <LineChart data={chartData}>
-            <XAxis dataKey="timestamp" tickFormatter={(timestamp) => moment(timestamp).format('YYYY-MM-DD HH:mm')} />
+            <XAxis dataKey="timestamp" tickFormatter={(timestamp) => moment(timestamp, 'DD.MM.YYYY HH:00').format('DD.MM.YYYY HH:00')} />
             <YAxis />
             <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-            <Tooltip labelFormatter={(value) => moment(value).format('YYYY-MM-DD HH:mm')} />
+            <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="value" stroke="#8884d8" />
           </LineChart>
-        </ResponsiveContainer>    
+        </ResponsiveContainer>
       )}
     </div>
   );
