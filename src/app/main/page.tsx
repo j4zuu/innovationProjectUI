@@ -7,9 +7,7 @@ import {fetchDataWithToken, postRoom} from "../auth/apiUtils";
 
 
 const Page = () => {
-    console.log(postRoom('room8'))
-
-    const [roomData, setRoomData] = useState<any[]>([]); // Use an array type for roomData
+    const [roomData, setRoomData] = useState<any[]>([]);
     useEffect(() => {
         fetchDataWithToken()
             .then((response) => {
