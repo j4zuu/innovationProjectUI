@@ -4,7 +4,7 @@ import { getTokenFromStorage } from "./auth";
 import variables from "@/app/variables";
 
 const apiUrl = variables.mainURL + '/rooms';
-const tempDataUrl = variables.mainURL + 'devices/1/data?start_date=-1d';
+const tempDataUrl = variables.mainURL + 'devices/1/data';
 const postRoomUrl = variables.mainURL + 'rooms'
 
 export const fetchDataWithToken = async () => {   

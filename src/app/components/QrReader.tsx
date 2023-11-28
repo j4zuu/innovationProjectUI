@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {QrReader} from "react-qr-reader";
+import {QrReader} from 'react-qr-reader';
 
 
 interface QrReaderProps {
