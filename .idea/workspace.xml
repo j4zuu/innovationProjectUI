@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/apiUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/apiUtils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Hamburger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Hamburger.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/data/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,32 +38,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jasuh/Documents/Programming/innovationProjectUI/public",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\jasuh\\Documents\\programming\\innoProject\\innovationProjectUI\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jasuh/Documents/programming/innoProject/innovationProjectUI&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\jasuh\\Documents\\programming\\innoProject\\innovationProjectUI\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jasuh\Documents\Programming\innovationProjectUI\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jasuh\Documents\programming\innoProject\innovationProjectUI\src\app" />
       <recent name="C:\Users\jasuh\Documents\Programming\innovationProjectUI\src\app\images" />
       <recent name="C:\Users\jasuh\Documents\Programming\innovationProjectUI\src\app\styles" />
       <recent name="C:\Users\jasuh\Documents\Programming\innovationProjectUI\src\app" />
       <recent name="C:\Users\jasuh\Documents\Programming\innovationProjectUI\src\app\views\loginView" />
-      <recent name="C:\Users\jasuh\Documents\Programming\innovationProjectUI" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,6 +106,10 @@
       <workItem from="1699382673001" duration="313000" />
       <workItem from="1699456590351" duration="18543000" />
       <workItem from="1699481118208" duration="4634000" />
+      <workItem from="1700229845597" duration="10093000" />
+      <workItem from="1701079383354" duration="2105000" />
+      <workItem from="1701081531105" duration="2193000" />
+      <workItem from="1701083825039" duration="3682000" />
     </task>
     <task id="LOCAL-00001" summary="burger wip">
       <created>1699276089581</created>
