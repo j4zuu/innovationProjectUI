@@ -29,19 +29,27 @@ const ChartComponent: React.FC = () => {
     fetchData();
   }, []);
 
-  const filteredData = data
-    .filter((point, index, array) => {
-      const currentTimestamp = moment(point.timestamp);
-      const nextTimestamp = index < array.length - 1 ? moment(array[index + 1].timestamp) : null;
-      return !nextTimestamp || currentTimestamp.hours() !== nextTimestamp.hours();
-    })
-    .slice(-30);
+  const uniqueHoursSet = new Set<string>();
 
-  const chartData = filteredData.map((point) => ({
-    timestamp: moment(point.timestamp).format('DD.MM.YYYY HH:00'),
-    value: point.value,
-  }));
-  console.log(chartData);
+  const filteredTemperatureData = data
+    .filter((point) => point.field === 'temperature')
+    .filter((point) => {
+      const currentTimestamp = moment(point.timestamp);
+      const hourString = currentTimestamp.format('YYYY-MM-DD HH:00');
+
+      if (!uniqueHoursSet.has(hourString)) {
+        uniqueHoursSet.add(hourString);
+        return true;
+      }
+      return false;
+    })
+    // .slice(-30);
+
+    const chartData = filteredTemperatureData.map((point) => ({
+      timestamp: moment(point.timestamp).format('DD.MM.YYYY HH:00'),
+      value: point.value,
+    }));
+    console.log(chartData);
 
   return (
     <div style={{ margin: 'auto', textAlign: 'center' }}>
