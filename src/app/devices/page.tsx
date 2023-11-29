@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import QrReaderComponent from "@/app/components/QrReader";
 import TopBar from "@/app/components/TopBar";
+import {getDevices} from "@/app/auth/apiUtils";
 const Page = () => {
     const [isScannerOpen, setIsScannerOpen] = useState(false);
     const [result, setResult] = useState<string | null>(null);

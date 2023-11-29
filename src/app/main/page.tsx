@@ -25,7 +25,7 @@ const Page = () => {
 
     const roomDivs = roomData.map((room, id) => (
         <div key={id}>
-            <TempCard name={room.name}/>
+            <TempCard name={room.name} temp={room.temp}/>
         </div>
     ));
 

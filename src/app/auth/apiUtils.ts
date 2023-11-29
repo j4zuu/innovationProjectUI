@@ -6,6 +6,7 @@ import variables from "@/app/variables";
 const apiUrl = variables.mainURL + '/rooms';
 const tempDataUrl = variables.mainURL + 'devices/1/data?start_date=-1d';
 const postRoomUrl = variables.mainURL + 'rooms'
+const deviceURL = variables.mainURL + 'devices/'
 
 export const fetchDataWithToken = async () => {   
   try {
@@ -86,4 +87,78 @@ export const postRoom = async (roomName: string) => {
   }
 };
 
+export const deleteDevice = async (deviceName: string) => {
+  try {
+    const token = await getTokenFromStorage();
+    const requestOptions: RequestInit = {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    };
 
+    const response = await fetch(deviceURL + deviceName, requestOptions);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('Data fetched:', data);
+      return data;
+    } else {
+      throw new Error('Data retrieval failed');
+    }
+  } catch (error) {
+    console.error('Data retrieval error:', error);
+    throw error;
+  }
+};
+
+// Ei toimi :(
+export const getDevices = async () => {
+  try {
+    const token = await getTokenFromStorage();
+    const requestOptions: RequestInit = {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    };
+
+    const response = await fetch(deviceURL, requestOptions);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('Data fetched:', data);
+      return data;
+    } else {
+      throw new Error('Data retrieval failed');
+    }
+  } catch (error) {
+    console.error('Data retrieval error:', error);
+    throw error;
+  }
+};
+
+export const postDevice = async () => {
+  try {
+    const token = await getTokenFromStorage();
+    const requestOptions: RequestInit = {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    };
+
+    const response = await fetch(deviceURL, requestOptions);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log('Data fetched:', data);
+      return data;
+    } else {
+      throw new Error('Data retrieval failed');
+    }
+  } catch (error) {
+    console.error('Data retrieval error:', error);
+    throw error;
+  }
+};
