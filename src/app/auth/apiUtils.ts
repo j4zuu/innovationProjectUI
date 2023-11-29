@@ -138,7 +138,7 @@ export const getDevices = async () => {
   }
 };
 
-export const postDevice = async () => {
+export const postDevice = async (deviceName: string) => {
   try {
     const token = await getTokenFromStorage();
     const requestOptions: RequestInit = {

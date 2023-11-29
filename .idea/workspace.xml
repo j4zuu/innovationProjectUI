@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b93d3284-3ea7-4a3c-9a0d-e7866407504c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/DeviceComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/auth/apiUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/apiUtils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Hamburger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Hamburger.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/TempCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/TempCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/QrReader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/QrReader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/devices/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/devices/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <workItem from="1700229845597" duration="10093000" />
       <workItem from="1701079383354" duration="2105000" />
       <workItem from="1701081531105" duration="2193000" />
-      <workItem from="1701083825039" duration="14793000" />
+      <workItem from="1701083825039" duration="17923000" />
     </task>
     <task id="LOCAL-00001" summary="burger wip">
       <created>1699276089581</created>
