@@ -168,3 +168,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
 } 
+
+.chartButton {
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #B4B4B3;
+    cursor: pointer;
+  }
+  
+  .chartButton.selected {
+    background-color: #26577C;
+    color: white;
+  }
+  
