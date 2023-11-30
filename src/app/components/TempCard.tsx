@@ -1,10 +1,9 @@
 import React from "react";
 
 const TempCard = ({ temp, name }: { temp: number | string; name: string}) => {
-    return <div className="tempBoxStyle">
-        <div>{name}</div>
-        <div>Temp: {temp}°C</div>
-    </div>;
+    return <button className='formButton customButton mainButton'>
+        <a href="/main/devices"><div>{name}</div></a>
+    </button>;
 };
 
 TempCard.defaultProps = {

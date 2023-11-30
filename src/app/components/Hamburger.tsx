@@ -12,9 +12,10 @@ class Hamburger extends React.Component<HamburgerProps> {
     render() {
         return (
             <Menu customBurgerIcon={ <FontAwesomeIcon icon={faBars} /> }>
-                <a id="temperatures" className="menu-item" href="/data">Temperatures</a>
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="about" className="menu-item" href="/devices">devices</a>
+                <a id="rooms" className="menu-item" href="/main">Your rooms</a>
+                <br></br>
+                <a id="about" className="menu-item" href="/devices">Add a new device</a>
+                <br></br>
                 <a id="contact" className="menu-item" href="/contact">Contact</a>
             </Menu>
         );

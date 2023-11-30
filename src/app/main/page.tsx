@@ -26,14 +26,14 @@ const Page = () => {
     const roomDivs = roomData.map((room, id) => (
         <div key={id}>
             <TempCard name={room.name}/>
-        </div>
+        </div>  
     ));
 
     return (
         <div className="main">
             <TopBar/>
-            <Feed/>
-            <div className="base">
+            <div className="alignment">
+            <h2>All your rooms:</h2>
                 {roomDivs}
             </div>
         </div>

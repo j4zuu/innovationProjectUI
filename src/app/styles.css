@@ -170,15 +170,29 @@ Note: Beware of modifying this element as it can break the animations - you shou
 } 
 
 .chartButton {
-    margin-right: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #B4B4B3;
+    width: 20;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin: 1%;
+    margin-bottom: 30px;
+    background-color: #999997;
   }
   
   .chartButton.selected {
     background-color: #26577C;
     color: white;
   }
+
+  .mainButton{
+    margin-top: 20px
+  }
+  
+  .alignment{
+    margin: 30px;
+  }
+
+  
   

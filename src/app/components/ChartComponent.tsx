@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { fetchTemperatureData } from '../auth/apiUtils';
+import { fetchTemperatureData, fetchTemperatureData2 } from '../auth/apiUtils';
 import moment from 'moment';
 import "../styles.css";
 
-interface DataPoint {
+interface DataPoint {   
   timestamp: string;
   value: number;
   field: string;
 }
+   
+interface ChartComponentProps{
+  devicenumber: string;
+}
 
-const ChartComponent: React.FC = () => {
+const ChartComponent: React.FC<ChartComponentProps> = ({ devicenumber }) => {
+  console.log(devicenumber);
   const [temperatureData, setTemperatureData] = useState<DataPoint[]>([]);
   const [humidityData, setHumidityData] = useState<DataPoint[]>([]);
   const [lightLevelData, setLightLevelData] = useState<DataPoint[]>([]);
@@ -20,7 +25,7 @@ const ChartComponent: React.FC = () => {
 
   const fetchData = async () => {
     try {
-      const allData = await fetchTemperatureData();
+      const allData = await fetchTemperatureData2(devicenumber);
 
       const tempData = allData.filter((point) => point.field === 'temperature');
       const humData = allData.filter((point) => point.field === 'humidity');
@@ -38,7 +43,8 @@ const ChartComponent: React.FC = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [devicenumber]);
 
   const organizeData = () => {
     const chartData: DataPoint[] = [];
@@ -90,7 +96,7 @@ const ChartComponent: React.FC = () => {
 
 return (
   <div style={{ margin: 'auto', textAlign: 'center' }}>
-    <h2>Temperature, Humidity, and Light Level Chart</h2>
+    <h2>Temperature, humidity, and light level chart {devicenumber}</h2>
     <div className="interval-buttons">
       <p>Every: </p>
       <button
@@ -113,7 +119,7 @@ return (
       </button>
     </div>
     {loading ? (
-      <p>Loading chart...</p>
+      <p>Loading chart...</p>  
     ) : error ? (
       <p>{error}</p>
     ) : (
